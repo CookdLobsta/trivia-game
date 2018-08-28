@@ -82,7 +82,7 @@ var currentquestion = 0,
 
 		function nextQuestion() {
 				submt = true;
-				alert("nQ");
+				//alert("nQ");
 				$('#explanation').empty();
 				$('#question').text(quiz[currentquestion]['question']);
 				$('#pager').text('Question ' + Number(currentquestion + 1) + ' of ' + quiz.length);
