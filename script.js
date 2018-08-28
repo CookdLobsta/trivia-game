@@ -28,7 +28,8 @@ var quiz = [
 			 },
 			 {
 					 "question" : "Q3: What event began on April 12, 1861?",
-					 "image" : "",
+					 "image" : 
+					 "https://assets4.bigthink.com/system/idea_thumbnails/65652/size_896/Second_Civil_War.jpg?1530889376",
 					 "choices" : [
 																	 "First manned flight",
 																	 "California became a state",
@@ -40,7 +41,8 @@ var quiz = [
 			 },
 			 {
 				"question" : "Q4: Grand Central Terminal, Park Avenue, New York is the world's:",
-				"image" : "",
+				"image" : 
+				"https://amp.businessinsider.com/images/5b327d971ae66219008b577e-750-511.jpg",
 				"choices" : [
 																"Largest railway station",
 																"Highest railway station",
@@ -77,9 +79,10 @@ var currentquestion = 0,
 				}
 		}
 
+
 		function nextQuestion() {
 				submt = true;
-				//alert("nQ");
+				alert("nQ");
 				$('#explanation').empty();
 				$('#question').text(quiz[currentquestion]['question']);
 				$('#pager').text('Question ' + Number(currentquestion + 1) + ' of ' + quiz.length);
@@ -112,7 +115,6 @@ var currentquestion = 0,
 
 								nextQuestion();
 						}
-
 		}
 
 
@@ -153,7 +155,7 @@ var currentquestion = 0,
 								//alert("submit");
 								submt = false;
 
-							 setTimeout(processQuestion,3000);
+							 setTimeout(processQuestion,2000);
 
 						}
 				})
@@ -165,6 +167,7 @@ var currentquestion = 0,
 				$('#question').empty();
 				$('#choice-block').empty();
 				$('#submitbutton').remove();
+				$('#question-image').hide();
 				$('#question').text("You got " + score + " out of " + quiz.length + " correct.");
 				$(document.createElement('h2')).css({
 						'text-align': 'center',
@@ -190,7 +193,7 @@ var currentquestion = 0,
 					 $("#imgId").attr("src","http://www.ytechie.com/2008/04/how-does-your-boss-know-youre-doing-a-great-job/good-job.png");
 				}
 				else if(result == 100){
-					 $("#imgId").attr("src","http://www.getaheadinmarketing.com/wp-content/themes/myjournal/js/timthumb.php?src=http://www.getaheadinmarketing.com/wp-content/uploads/evaluation-tick.jpg&w=653&h=260");
+					 $("#imgId").attr("src","https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Fxemoji_u1F4AF.svg/1024px-Fxemoji_u1F4AF.svg.png");
 				}
 		}
 
